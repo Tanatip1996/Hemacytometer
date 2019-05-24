@@ -1,0 +1,66 @@
+
+<ion-content class="bck" >
+    
+        
+    <!-- <div  class="waterline"></div>
+    
+    <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul> -->
+  
+  <div *ngIf="picture" >
+    
+    <div class="tit">HEMACYTOMETER</div>
+    <img [src]="picture" class="picCapp">
+    
+    
+      <button class="dropleftB" ion-button outline (click)="startCamera()" >
+        <ion-icon name="arrow-dropleft"></ion-icon>
+      </button>
+    
+
+   
+        <button class="droprightB" ion-button outline (click)="savePicture()">
+          <ion-icon name="arrow-dropright"></ion-icon>
+        </button>
+     
+    </div> 
+  
+  
+  <div *ngIf="!picture">
+    
+    <div class="FrameCap" >
+     
+    </div>
+      <p center>
+        Plece Click Camera Button <br>
+        With Take Photo.
+        <ion-icon name="camera"></ion-icon>
+      </p>
+   
+      <button class="cameraB" ion-button outline (click)="takePicture()" >
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    
+   
+  
+    <!-- <ion-fab bottom right>
+      <button ion-button outline (click)="switchCamera()">
+        <ion-icon name="reverse-camera"></ion-icon>
+      </button>
+    </ion-fab> -->
+
+  </div>
+<!-- </div > -->
+
+</ion-content>
